@@ -1,0 +1,53 @@
+@import "reset.scss";
+@import "color.scss";
+@import "font.scss";
+@import "theme-switch.scss";
+
+html, body {
+    font-family: $fontStackSans;
+    transition: color 400ms linear, background 400ms linear;
+}
+
+a {
+    color: inherit;
+}
+
+.light {
+    color: $primaryDark;
+    background: $primaryLight;
+    a:hover,
+    a:focus {
+        color: $tertiaryDark;
+    }
+    .footer {
+        color: $secondaryDark;
+    }
+}
+
+.dark {
+    color: $primaryLight;
+    background: $primaryDark;
+    a:hover,
+    a:focus {
+        color: $tertiaryLight;
+    }
+    .footer {
+        color: $secondaryLight;
+    }
+}
+
+.section {
+    color: inherit;
+    background: inherit;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    margin: 1rem 0;
+}
+
+.sectionHead {
+    text-transform: uppercase;
+}
+
+.sectionFoot {
+    font-size: 0.75rem;
+}
