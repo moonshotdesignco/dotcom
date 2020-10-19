@@ -4,14 +4,27 @@
   "description": "MDCo",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "browser-sync start --server \"prod\" --files \"prod\"",
+    "css:lint": "stylelint src/scss/*.scss --syntax scss || true",
+    "css:scss": "node-sass --output-style compressed -o prod src/scss",
+    "css:autoprefixer": "postcss -u autoprefixer -r prod/*.css",
+    "watch:css": "onchange \"src/scss\" -- npm run build:css",
+    "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer",
+    "watch:html": "onchange \"src/html\" -- npm run build:html",
+    "build:html": "posthtml -c posthtml.json",
+    "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+    "build:js": "webpack --mode=production",
+    "watch": "run-p serve watch:css watch:html watch:js",
+    "build": "run-p build:css build:html build:js",
+    "watch:img": "onchange \"src/img\" -- npm run build:img",
+    "build:img": "imagemin src/img/* --out-dir=prod/img"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/moonshotdesignco/dotcom.git"
   },
   "author": "Harry Dunaway",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/moonshotdesignco/dotcom/issues"
   },

@@ -1,0 +1,8 @@
+"rules": {
+    "declaration-colon-space-after": "always",
+    "color-no-invalid-hex": true,
+    "color-hex-case": "lower",
+    "block-no-empty": true,
+    "max-empty-lines": 2,
+    "no-eol-whitespace": true
+}
