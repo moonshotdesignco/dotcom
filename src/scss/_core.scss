@@ -1,0 +1,162 @@
+@import "reset";
+@import "mdco-colors";
+@import "mdco-fonts";
+
+html,
+.fold-toggle,
+.fold-element {
+    transition-property: background, color;
+    transition-duration: 600ms;
+}
+
+body {
+    font-family: $fontstack;
+    margin: 0 1rem;
+    padding: 2rem 0 1rem;
+}
+
+h3, p, ul, #contactform {
+    padding-bottom: 0.5rem;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: $lightblue;
+}
+
+button {
+    cursor: pointer;
+    margin: 0;
+    padding: 0 1rem;
+    height: 2rem;
+    border: none;
+    border-radius: 0.25rem;
+    &:hover,
+    &:active,
+    &:focus,
+    &.current {
+        box-shadow: 0 0 0 1px $gray, inset 0 0 0 2px $gray;
+    }
+}
+
+div#container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 3rem);
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+}
+
+div#theme-switcher {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+    button.btn-theme-switcher {
+        display: inline-block;
+        &#btn-light {
+            background: $lightergray;
+            color: $black;
+        }
+        &#btn-dark {
+            background: $darkergray;
+            color: $white;
+        }
+    }
+}
+
+div.content {
+    max-width: 100%;
+    @media (orientation: landscape) {
+        margin-left: 2rem;
+    }
+    padding: {
+        left: 1rem;
+        right: 0;
+    }
+    margin-bottom: 1rem;
+    border-left: {
+        width: 1rem;
+        style: solid;
+        color: $gray;
+    }
+}
+
+div.logo {
+    width: 100%;
+    margin: {
+        left: auto;
+        right: auto;
+        bottom: 1rem;
+    }
+}
+
+div.cres {
+    width: 50%;
+    margin: auto;
+}
+
+img#logo,
+img#cres {
+    width: 100%;
+}
+
+img.emote {
+    height: 1.5em;
+    transform: translateY(0.375em);
+    &.no-tr {
+        transform: none;
+    }
+}
+
+.list {
+    list-style-type: none;
+}
+
+.list li {
+    padding-bottom: 0.25rem;
+}
+
+.fold-toggle {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: unset;
+    color: inherit;
+    &.current {
+        border-bottom-left-radius: 0;
+    }
+}
+
+#closeBtn {
+    display: none;
+}
+
+.fold-element {
+    display: none;
+    padding: 0.5rem 1rem;
+    box-shadow: 0px 0px 0px 1px $gray, inset 0px 0px 0px 2px $gray;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    color: inherit;
+    &.expanded {
+        display: block !important;
+    }
+}
+
+.footer {
+    font: {
+        family: $fontstackmono;
+        style: italic;
+        size: 0.75rem;
+    }
+    text-align: center;
+    margin-top: 2rem;
+}

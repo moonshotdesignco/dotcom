@@ -1,0 +1,33 @@
+@import "core";
+
+html.themeLight {
+    background: $white;
+    body {
+        color: $black;
+    }
+    .fold-toggle {
+        background: $lightergray;
+    }
+    .fold-element {
+        background: $lightergray;
+    }
+    .footer {
+        color: $gray;
+    }
+}
+
+html.themeDark {
+    background: $black;
+    body {
+        color: $white;
+    }
+    .fold-toggle {
+        background: $darkergray;
+    }
+    .fold-element {
+        background: $darkergray;
+    }
+    .footer {
+        color: $lightgray;
+    }
+}
