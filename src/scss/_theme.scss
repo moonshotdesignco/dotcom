@@ -1,15 +1,7 @@
-@import "core";
-
 html.themeLight {
     background: $white;
     body {
         color: $black;
-    }
-    .fold-toggle {
-        background: $lightergray;
-    }
-    .fold-element {
-        background: $lightergray;
     }
     .footer {
         color: $gray;
@@ -21,11 +13,9 @@ html.themeDark {
     body {
         color: $white;
     }
-    .fold-toggle {
-        background: $darkergray;
-    }
-    .fold-element {
-        background: $darkergray;
+    img#logo,
+    img#cres {
+        filter: invert(1);
     }
     .footer {
         color: $lightgray;

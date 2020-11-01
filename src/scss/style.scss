@@ -1,10 +1,9 @@
 @import "reset";
 @import "mdco-colors";
 @import "mdco-fonts";
+@import "theme";
 
-html,
-.fold-toggle,
-.fold-element {
+html {
     transition-property: background, color;
     transition-duration: 600ms;
 }
@@ -15,7 +14,7 @@ body {
     padding: 2rem 0 1rem;
 }
 
-h3, p, ul, #contactform {
+h3, p, ul {
     padding-bottom: 0.5rem;
 }
 
@@ -26,21 +25,20 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: $lightblue;
+    color: $pink;
 }
 
 button {
     cursor: pointer;
     margin: 0;
-    padding: 0 1rem;
-    height: 2rem;
+    padding: 0.5rem;
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     &:hover,
     &:active,
     &:focus,
     &.current {
-        box-shadow: 0 0 0 1px $gray, inset 0 0 0 2px $gray;
+        box-shadow: 0 0 0 1px $pink, inset 0 0 0 2px $pink;
     }
 }
 
@@ -70,23 +68,6 @@ div#theme-switcher {
     }
 }
 
-div.content {
-    max-width: 100%;
-    @media (orientation: landscape) {
-        margin-left: 2rem;
-    }
-    padding: {
-        left: 1rem;
-        right: 0;
-    }
-    margin-bottom: 1rem;
-    border-left: {
-        width: 1rem;
-        style: solid;
-        color: $gray;
-    }
-}
-
 div.logo {
     width: 100%;
     margin: {
@@ -104,51 +85,7 @@ div.cres {
 img#logo,
 img#cres {
     width: 100%;
-}
-
-img.emote {
-    height: 1.5em;
-    transform: translateY(0.375em);
-    &.no-tr {
-        transform: none;
-    }
-}
-
-.list {
-    list-style-type: none;
-}
-
-.list li {
-    padding-bottom: 0.25rem;
-}
-
-.fold-toggle {
-    display: block;
-    margin: 0.5rem 0;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    font-size: unset;
-    color: inherit;
-    &.current {
-        border-bottom-left-radius: 0;
-    }
-}
-
-#closeBtn {
-    display: none;
-}
-
-.fold-element {
-    display: none;
-    padding: 0.5rem 1rem;
-    box-shadow: 0px 0px 0px 1px $gray, inset 0px 0px 0px 2px $gray;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    color: inherit;
-    &.expanded {
-        display: block !important;
-    }
+    transition: filter 600ms;
 }
 
 .footer {
