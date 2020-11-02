@@ -1,99 +1,100 @@
-@import "reset";
-@import "mdco-colors";
-@import "mdco-fonts";
-@import "theme";
+@import 'reset';
+@import 'mdco-colors';
+@import 'mdco-fonts';
+@import 'theme';
 
 html {
-    transition-property: background, color;
-    transition-duration: 600ms;
+  transition-property: background, color;
+  transition-duration: 600ms;
 }
 
 body {
-    font-family: $fontstack;
-    margin: 0 1rem;
-    padding: 2rem 0 1rem;
+  font-family: $fontstack;
+  margin: 0 1rem;
+  padding: 2rem 0 1rem;
 }
 
-h3, p, ul {
-    padding-bottom: 0.5rem;
+h3,
+p,
+ul {
+  padding-bottom: 0.5rem;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: $pink;
+  color: $pink;
 }
 
 button {
-    cursor: pointer;
-    margin: 0;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    &:hover,
-    &:active,
-    &:focus,
-    &.current {
-        box-shadow: 0 0 0 1px $pink, inset 0 0 0 2px $pink;
-    }
+  cursor: pointer;
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  &:hover,
+  &:active,
+  &:focus,
+  &.current {
+    box-shadow: 0 0 0 0.25rem $pink;
+  }
 }
 
 div#container {
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - 3rem);
-    justify-content: space-between;
-    max-width: 900px;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 3rem);
+  justify-content: space-between;
+  max-width: 900px;
+  margin: auto;
 }
 
 div#theme-switcher {
-    width: 100%;
-    margin-bottom: 2rem;
-    text-align: center;
-    button.btn-theme-switcher {
-        display: inline-block;
-        &#btn-light {
-            background: $lightergray;
-            color: $black;
-        }
-        &#btn-dark {
-            background: $darkergray;
-            color: $white;
-        }
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+  button.btn-theme-switcher {
+    display: inline-block;
+    &#btn-light {
+      background: $lightergray;
+      color: $black;
     }
+    &#btn-dark {
+      background: $darkergray;
+      color: $white;
+    }
+  }
 }
 
 div.logo {
-    width: 100%;
-    margin: {
-        left: auto;
-        right: auto;
-        bottom: 1rem;
-    }
+  width: 100%;
+  margin: {
+    left: auto;
+    right: auto;
+    bottom: 1rem;
+  }
 }
 
 div.cres {
-    width: 50%;
-    margin: auto;
+  width: 50%;
+  margin: auto;
 }
 
 img#logo,
 img#cres {
-    width: 100%;
-    transition: filter 600ms;
+  width: 100%;
+  transition: filter 600ms;
 }
 
 .footer {
-    font: {
-        family: $fontstackmono;
-        style: italic;
-        size: 0.75rem;
-    }
-    text-align: center;
-    margin-top: 2rem;
+  font: {
+    family: $fontstackmono;
+    style: italic;
+    size: 0.75rem;
+  }
+  text-align: center;
+  margin-top: 2rem;
 }

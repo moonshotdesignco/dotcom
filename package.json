@@ -12,8 +12,10 @@
         "build:css": "npm run css:scss && npm run css:autoprefixer",
         "watch:html": "onchange \"src/html\" -- npm run build:html",
         "build:html": "posthtml -c posthtml.json",
-        "watch:t": "run-p serve watch:css watch:html",
-        "build:t": "run-p build:css build:html",
+        "watch:js": "onchange \"src/js\" -- npm run build:js",
+        "build:js": "terser src/js/script.js -c -m -o p/script.js",
+        "watch": "run-p serve watch:css watch:html",
+        "build": "run-p build:css build:html",
         "watch:img": "onchange \"src/img\" -- npm run build:img",
         "build:img": "imagemin src/img/* --out-dir=p/img"
     },
