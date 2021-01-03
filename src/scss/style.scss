@@ -89,6 +89,34 @@ img#cres {
   transition: filter 600ms;
 }
 
+img#clients,
+img#contact {
+  width: 100%;
+  max-height: 8rem;
+  margin: auto;
+}
+
+div.content {
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  font: {
+    family: $fontstackmono;
+    // size: 1.25rem;
+  }
+  margin-top: 2rem;
+  li {
+    list-style-type: none;
+    margin-bottom: 0.75rem;
+    a {
+      text: {
+        transform: lowercase;
+      }
+    }
+  }
+}
+
 .footer {
   font: {
     family: $fontstackmono;

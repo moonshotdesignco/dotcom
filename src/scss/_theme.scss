@@ -1,21 +1,26 @@
-html.themeLight {
-    background: $white;
-    body {
-        color: $black;
-    }
-    .footer {
-        color: $gray;
-    }
-}
+// html.themeLight {
+//     background: $white;
+//     body {
+//         color: $black;
+//     }
+//     .footer {
+//         color: $gray;
+//     }
+// }
 
-html.themeDark {
+html {
     background: $black;
     body {
         color: $white;
     }
     img#logo,
-    img#cres {
+    img#cres,
+    img#clients,
+    img#contact {
         filter: invert(1);
+    }
+    .content {
+        color: $lightergray;
     }
     .footer {
         color: $lightgray;

@@ -1,31 +1,31 @@
 // Start Theme Switcher
 
-let elHTML = document.documentElement;
-let btnLight = document.getElementById('btn-light');
-let btnDark = document.getElementById('btn-dark');
+// let elHTML = document.documentElement;
+// let btnLight = document.getElementById('btn-light');
+// let btnDark = document.getElementById('btn-dark');
 
-btnLight.onclick = function () {
-  elHTML.classList.add('themeLight');
-  elHTML.classList.remove('themeDark');
-  btnLight.classList.add('current');
-  btnDark.classList.remove('current');
-};
+// btnLight.onclick = function () {
+//   elHTML.classList.add('themeLight');
+//   elHTML.classList.remove('themeDark');
+//   btnLight.classList.add('current');
+//   btnDark.classList.remove('current');
+// };
 
-btnDark.onclick = function () {
-  elHTML.classList.remove('themeLight');
-  elHTML.classList.add('themeDark');
-  btnLight.classList.remove('current');
-  btnDark.classList.add('current');
-};
+// btnDark.onclick = function () {
+//   elHTML.classList.remove('themeLight');
+//   elHTML.classList.add('themeDark');
+//   btnLight.classList.remove('current');
+//   btnDark.classList.add('current');
+// };
 
-function setTheme() {
-  elHTML.classList.add('themeLight');
-  elHTML.classList.remove('themeDark');
-  btnLight.classList.add('current');
-  btnDark.classList.remove('current');
-}
+// function setTheme() {
+//   elHTML.classList.add('themeDark');
+//   elHTML.classList.remove('themeLight');
+//   btnDark.classList.add('current');
+//   btnLight.classList.remove('current');
+// }
 
-setTheme();
+// setTheme();
 
 // End Theme Switcher
 
